@@ -81,11 +81,6 @@ main {
   background-color: black;
 }
 
-img {
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
-}
-
 #bloc1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,11 +95,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
+  background-color: blue;
+  height: 50vh;
   width: 100%;
+  position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), no-repeat url("./img/underwater.jpeg");
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("./img/underwater.jpeg");
   background-position: center;
+  background-size: cover;
 }
 
 #bloc1 h1 {
@@ -131,20 +129,15 @@ img {
   background-color: #c8c8c8;
 }
 
-#author {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-color: black;
+#bloc1 #author {
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
+  padding: 25px;
+}
+
+#bloc1 #author p {
   font-size: 16px;
-  padding-right: 60px;
-  padding-bottom: 10px;
 }
 
 #bloc2 {
@@ -184,8 +177,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -257,28 +251,37 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 70vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45vh;
   width: 100%;
-  background: black no-repeat url("./img/elephants.jpeg");
-  background-position: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), black no-repeat url("./img/elephants.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), black no-repeat url("./img/elephants.jpeg");
+  background-position: top;
+  background-size: cover;
 }
 
 #bloc3 h2 {
   text-align: center;
   font-size: 70px;
-  padding-top: 300px;
-  margin-left: 180px;
-  margin-right: 180px;
+  padding-top: 200px;
+  width: 800px;
 }
 
 #bloc3 p {
+  height: 100px;
   text-align: center;
   font-size: 16px;
   padding-top: 50px;
-  margin-left: 180px;
-  margin-right: 180px;
+  width: 800px;
+}
+
+#bloc3 p a {
+  cursor: pointer;
+  padding-bottom: 5px;
+  -webkit-text-decoration: underline dashed red;
+          text-decoration: underline dashed red;
 }
 
 #bloc4, #bloc6 {
@@ -292,36 +295,42 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 40vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32vh;
   background-color: black;
 }
 
 #bloc4 h2, #bloc6 h2 {
   text-align: center;
   font-size: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 900px;
 }
 
 #bloc4 p, #bloc6 p {
   text-align: center;
   padding-top: 50px;
   font-size: 15px;
-  margin-left: 170px;
-  margin-right: 170px;
+  width: 900px;
 }
 
-#horses img {
-  width: 100%;
+#horses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: no-repeat url("./img/horses.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 32vh;
 }
 
 #bloc5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 20vh;
+  width: 100%;
+  height: 34vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -331,21 +340,27 @@ img {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  padding-top: 50px;
   background-color: black;
 }
 
-#bloc5 img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 350px;
-  margin: 20px;
+#bloc5 #penguins {
+  width: 600px;
+  margin-right: 15px;
+  background: no-repeat url("./img/penguins.jpeg");
+  background-size: cover;
+}
+
+#bloc5 #octopus {
+  width: 600px;
+  margin-left: 15px;
+  background: no-repeat url("./img/octopus.jpeg");
+  background-size: cover;
 }
 
 #bloc7 {
-  height: 20vh;
+  background-color: black;
+  height: 25vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,17 +371,17 @@ img {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-right: 10px;
   margin-left: 10px;
 }
 
 #bloc7 img {
-  width: 230px;
+  width: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 240px;
+  height: 280px;
 }
 
 footer {
